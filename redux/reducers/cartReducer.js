@@ -14,6 +14,7 @@ let cartReducer = (state = defaultState, action) => {
           items: [...newState.selectedItems.items, action.payload],
           restaurantName: action.payload.restaurantName,
         };
+
       } else {
         console.log("REMOVE FROM CART");
         newState.selectedItems = {
@@ -24,6 +25,7 @@ let cartReducer = (state = defaultState, action) => {
           ],
           restaurantName: action.payload.restaurantName,
         };
+        
       }
       console.log(newState, "👉");
       return newState;
